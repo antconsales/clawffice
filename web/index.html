@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Clawffice — Your team, alive</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header><div><strong>Clawffice</strong><span class="subtitle">Your team, observed in a tiny night office</span></div><div><b id="mode">Connecting</b> · <span id="connection" role="status">Connecting…</span><br><small id="sources">No source connected</small></div></header>
+  <main>
+    <section class="office" aria-label="Agent office"><div id="agents"></div><p id="empty">Waiting for real OpenClaw observations. Try <code>npm run demo</code> for a simulated walkthrough.</p></section>
+    <aside id="card" hidden aria-label="Agent details"><button id="close" aria-label="Close agent details">×</button><h1 id="name"></h1><dl id="details"></dl><h2>Recent actions</h2><ol id="actions"></ol></aside>
+  </main>
+  <footer>Provisional reference background. Characters in the image are illustrative; clickable badges represent observed agents. <span id="demo-note"></span></footer>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

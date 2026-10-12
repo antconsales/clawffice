@@ -1,0 +1,13 @@
+{
+  "name": "clawffice-openclaw",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": { "ws": "8.22.0" },
+  "peerDependencies": { "openclaw": ">=2026.9.8" },
+  "peerDependenciesMeta": { "openclaw": { "optional": true } },
+  "openclaw": {
+    "extensions": ["./index.js"],
+    "compat": { "pluginApi": ">=2026.9.8", "minGatewayVersion": "2026.9.8" }
+  }
+}

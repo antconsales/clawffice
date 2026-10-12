@@ -1,0 +1,23 @@
+{
+  "id": "clawffice",
+  "name": "Clawffice observer",
+  "description": "Observe official lifecycle and tool hooks without sharing conversation content",
+  "activation": { "onStartup": true },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["instanceId"],
+    "properties": {
+      "instanceId": { "type": "string", "pattern": "^[a-zA-Z0-9_-]{1,64}$" },
+      "hubUrl": { "type": "string", "default": "ws://127.0.0.1:8787/ingest" },
+      "agents": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": { "name": { "type": "string", "maxLength": 256 }, "role": { "type": "string", "maxLength": 256 } }
+        }
+      }
+    }
+  }
+}

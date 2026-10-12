@@ -1,0 +1,16 @@
+{
+  "name": "clawffice",
+  "version": "0.1.0",
+  "description": "Your AI agent team, observed in a tiny night office",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node src/main.js",
+    "demo": "node src/main.js --demo",
+    "test": "node --test",
+    "lint": "node scripts/lint.js"
+  },
+  "dependencies": { "ws": "8.22.0" }
+}

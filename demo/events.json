@@ -1,0 +1,9 @@
+[
+  { "atMs": 0, "event": { "kind": "session_start", "sessionKey": "demo:dev", "agentId": "dev", "name": "Dev", "role": "Development" } },
+  { "atMs": 800, "event": { "kind": "before_agent_run", "sessionKey": "demo:dev", "agentId": "dev", "runId": "demo-run-1" } },
+  { "atMs": 2200, "event": { "kind": "before_tool_call", "sessionKey": "demo:dev", "tool": "exec", "runId": "demo-run-1" } },
+  { "atMs": 3500, "event": { "kind": "subagent_spawned", "sessionKey": "demo:research", "agentId": "research", "name": "Research", "role": "Research", "runId": "demo-run-2" } },
+  { "atMs": 4800, "event": { "kind": "after_tool_call", "sessionKey": "demo:dev", "tool": "exec", "outcome": "success", "durationMs": 2600 } },
+  { "atMs": 6000, "event": { "kind": "subagent_progress", "sessionKey": "demo:research", "phase": "ended", "outcome": "error", "runId": "demo-run-2" } },
+  { "atMs": 7800, "event": { "kind": "agent_end", "sessionKey": "demo:dev", "runId": "demo-run-1", "outcome": "success", "durationMs": 7000 } }
+]

@@ -1,0 +1,18 @@
+# TEMPLATE ONLY: copy manually into ~/.config/systemd/user/ in container 101.
+# Adjust WorkingDirectory, ExecStart and Node path before installation.
+[Unit]
+Description=Clawffice local observation hub
+
+[Service]
+Type=simple
+WorkingDirectory=%h/clawffice
+ExecStart=/usr/bin/node %h/clawffice/src/main.js
+Environment=PORT=8787
+EnvironmentFile=-%h/.config/clawffice/hub.env
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+UMask=0077
+
+[Install]
+WantedBy=default.target
